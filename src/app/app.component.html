@@ -1,0 +1,36 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<hr>
+<ul *ngFor="let i of people">
+  <li *ngIf="i.age<30">
+  {{i.age}},
+  {{i.name}}
+  </li>
+  </ul>
+
+<ul>
+  <li *ngFor="let product of PRODUCTS">
+  <h2>{{product.name}}/${{product.price}}</h2>
+  <p>{{product.description}}</p>
+  </li>
+</ul>
+<hr>
+
+<div *ngFor="let m of Movies;">
+  *{{m.name}}
+</div>
+<hr>
+<ul *ngFor="let M of Movies ; let i=index">       <li >   
+  {{i+1}}{{ M.name }}
+  </li>
+</ul>
+<hr>
+
+<h1>Contact List</h1><table border="1"><thead><th>Name</th><th>Email</th><th *ngIf="showActions">Actions</th></thead><tbody><tr *ngFor="let contact of contacts"><td>    {{contact.name}}</td><td>    {{contact.email}}</td><td *ngIf="showActions">    <button>Delete</button>    <button>Update</button></td></tr></tbody></table>  
+
+      
+
+  
